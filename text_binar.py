@@ -1,4 +1,3 @@
-print("TRADUCTOR BINARIO-TEXTO/TEXTO-BINARIO")
 from VALID import binn, ns
 import subprocess
 def AB(preg):
@@ -15,9 +14,8 @@ def ent(n):
         ln-=1
     return summ
         
-
-c=("s")
-while c==("s"):
+while True:
+    print("TRADUCTOR BINARIO-TEXTO/TEXTO-BINARIO")
     print("Qué desea hacer?")
     print("A)Descifrar codigo binario")
     print("B)Traducir a binario")
@@ -55,8 +53,8 @@ while c==("s"):
             resul=(" ").join(texx)
             print(resul)
     c=ns(input("¿Desea continuar?: "))
-    if c==("s"):
+    if c==("n"):
+        break
+    else:
         subprocess.call(["cmd.exe","/C","cls"])
             
-
-    
