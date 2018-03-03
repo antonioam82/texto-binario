@@ -13,6 +13,13 @@ def ent(n):
             summ+=2**(ln-1)
         ln-=1
     return summ
+
+def sol_bina(n):
+    for i in n:
+        if i!="0" and i!="1" and i!=" ":
+            n=sol_bina(str(input("Introduzca solo código binario: ")))
+            break
+    return n
         
 while True:
     print("TRADUCTOR BINARIO-TEXTO/TEXTO-BINARIO")
@@ -22,7 +29,7 @@ while True:
     op=AB(input("Esciba aquí su opción: "))
     code=[]
     if op==("A"):
-        inn=str(input("Introduzca código binario: "))
+        inn=sol_bina(str(input("Introduzca código binario: ")))
         lista_inn=inn.split(" ")
         for i in lista_inn:
             res=ent(i)
@@ -58,3 +65,4 @@ while True:
     else:
         subprocess.call(["cmd.exe","/C","cls"])
             
+
