@@ -65,8 +65,7 @@ def oop(string):
         n=oop(input("Operación no válida: "))
     return n
 
-def binn(n):
-    num=n
+def binn(num):
     restos=[]
     while num>1:
         res=int(num%2)#PARA QUE EL RESTO SALGA SIN DECIMALES
