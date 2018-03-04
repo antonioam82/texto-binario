@@ -70,8 +70,8 @@ def binn(num):
     while num>1:
         res=int(num%2)#PARA QUE EL RESTO SALGA SIN DECIMALES
         restos.append(str(res))#PARA QUE RES SE AÑADA A LA LISTA EN FORMATO "str".
-        num=int(num/2)
-    stri=str(num)
+        num=int(num/2)#VOLVEMOS A DIVIDIR EL NUMERO POR 2
+    stri=str(num)#VERSION EN CADENA DEL ULTIMO RESULTADO DE LA SERIE DE DIVISIONES POR 2
     nv=restos[::-1]#PARA INVERTIR EL ORDEN DE LOS ELEMENTOS EN UNA LISTA
     j=("").join(nv)
     sf=stri+j
