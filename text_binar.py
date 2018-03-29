@@ -41,7 +41,7 @@ while True:
         
     else:
         text=input("Tu texto aquí: ")
-        preg=AB(input("¿A partir del primer 1 (A) o incluir 0(B): "))
+        preg=AB(input("¿A partir del primer 1 (A) o incluir 0 a la izquierda (B): "))
         preg2=AB(input("¿En lista (A) o en columna (B)?: "))
         tex_lis=list(text)
         texx=[]
