@@ -35,7 +35,9 @@ while True:
             res=ent(i)
             code.append(chr(res))
         final=("").join(code)
-        print(final)
+        print("")
+        print("TRADUCCIÓN: ",final)
+        print("")
         
     else:
         text=input("Tu texto aquí: ")
@@ -52,10 +54,13 @@ while True:
                     print(bi)
             elif preg==("B"):
                 bi=(bin(ord(i)))
+                lista=list(bi)
+                del(lista[1])
+                num_final=("").join(lista)
                 if preg2==("B"):
-                    print(bi)
+                    print(num_final)
                 else:
-                    texx.append(bi)
+                    texx.append(num_final)
         if preg2==("A"):
             resul=(" ").join(texx)
             print(resul)
@@ -65,4 +70,3 @@ while True:
     else:
         subprocess.call(["cmd.exe","/C","cls"])
             
-
