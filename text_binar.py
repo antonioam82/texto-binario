@@ -26,7 +26,7 @@ while True:
     print("Qué desea hacer?")
     print("A)Descifrar codigo binario")
     print("B)Traducir a binario")
-    op=AB(input("Esciba aquí su opción: "))
+    op=AB(input("Escriba aquí su opción: "))
     code=[]
     if op==("A"):
         inn=sol_bina(str(input("Introduzca código binario: ")))
