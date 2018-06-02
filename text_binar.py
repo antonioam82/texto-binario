@@ -31,17 +31,20 @@ while True:
     if op==("A"):
         inn=sol_bina(str(input("Introduzca código binario: ")))
         lista_inn=inn.split(" ")
-        for i in lista_inn:
-            res=ent(i)
-            code.append(chr(res))
-        final=("").join(code)
-        print("")
-        print("TRADUCCIÓN: ",final)
-        print("")
-        
+        try:
+            for i in lista_inn:
+                res=ent(i)
+                code.append(chr(res))
+            final=("").join(code)
+            print("")
+            print("TRADUCCIÓN: ",final)
+            print("")
+        except:
+            print("La secuencia binaria, sin espacios, introducida es demasiado larga")
+            pass
     else:
         text=input("Tu texto aquí: ")
-        preg=AB(input("¿A partir del primer 1 (A) o incluir 0 a la izquierda (B): "))
+        preg=AB(input("¿A partir del primer 1 (A) o incluir 0(B): "))
         preg2=AB(input("¿En lista (A) o en columna (B)?: "))
         tex_lis=list(text)
         texx=[]
@@ -70,3 +73,6 @@ while True:
     else:
         subprocess.call(["cmd.exe","/C","cls"])
             
+
+    
+
