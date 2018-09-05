@@ -25,11 +25,13 @@ while True:
     print("TRADUCTOR BINARIO-TEXTO/TEXTO-BINARIO")
     print("Qué desea hacer?")
     print("A)Descifrar codigo binario")
-    print("B)Traducir a binario")
+    print("B)Traducir de texto")
     op=AB(input("Escriba aquí su opción: "))
     code=[]
     if op==("A"):
         inn=sol_bina(str(input("Introduzca código binario: ")))
+        while len(inn)>20 and not (" ") in inn:
+            inn=sol_bina(str(input("Asegurese de separar los \'bytes\' mediante espacios: ")))
         lista_inn=inn.split(" ")
         try:
             for i in lista_inn:
@@ -71,8 +73,10 @@ while True:
     if c==("n"):
         break
     else:
-        subprocess.call(["cmd.exe","/C","cls"])
+        try:
+            subprocess.call(["cmd.exe","/C","cls"])
+        except:
+            continue
             
 
-    
 
